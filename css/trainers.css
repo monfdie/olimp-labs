@@ -1,0 +1,160 @@
+.trainer-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-block: 2rem;
+}
+.trainer-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.trainer-filters select {
+  min-width: 10rem;
+}
+.trainer-catalog-card {
+  min-width: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-background);
+  transition: border-color var(--transition);
+}
+.trainer-catalog-card:hover,
+.trainer-catalog-card:focus-within {
+  border-color: var(--color-accent);
+}
+.trainer-card-link {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  border-radius: inherit;
+}
+.trainer-placeholder {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-card) var(--radius-card) 0 0;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface-raised);
+}
+.trainer-catalog-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+.trainer-card-format {
+  color: var(--color-accent);
+}
+.trainer-card-location,
+.trainer-card-specialty,
+.trainer-source,
+.trainer-profile-location,
+.trainer-detail p:not(.eyebrow),
+.trainer-detail li {
+  color: var(--color-muted);
+}
+.trainer-card-location,
+.trainer-card-specialty,
+.trainer-source {
+  font-size: 0.875rem;
+}
+.trainer-card-more {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  color: var(--color-accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.trainer-source {
+  margin-top: 2rem;
+}
+.trainer-source a,
+.trainer-back {
+  color: var(--color-accent);
+}
+.trainer-source a:hover,
+.trainer-back:hover {
+  text-decoration: underline;
+}
+.trainer-back {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+}
+#main > .container > .trainer-back {
+  margin-block: 1.5rem;
+}
+.trainer-profile-header {
+  display: grid;
+  grid-template-columns: minmax(12rem, 22rem) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 4rem);
+  padding-bottom: 2rem;
+}
+.trainer-profile-photo {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+.trainer-profile-header h1 {
+  margin-top: 0.75rem;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  overflow-wrap: anywhere;
+}
+.trainer-profile-location {
+  margin-top: 0.75rem;
+}
+.trainer-bio {
+  max-width: 38rem;
+  margin-top: 1.5rem;
+}
+.trainer-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.trainer-detail {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+}
+.trainer-detail h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+.trainer-detail ul {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.trainer-club {
+  margin-block: 1rem 4rem;
+}
+.trainer-club h2,
+.trainer-club p:not(.eyebrow) {
+  margin-top: 0.5rem;
+}
+.trainer-club .trainer-back {
+  margin-top: 0.75rem;
+}
+@media (max-width: 639px) {
+  .trainer-profile-header,
+  .trainer-detail-grid {
+    grid-template-columns: 1fr;
+  }
+  .trainer-profile-photo {
+    max-width: 22rem;
+    width: 100%;
+  }
+  .trainer-filters {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+}

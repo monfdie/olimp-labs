@@ -13,7 +13,11 @@
 <link href="assets/images/logo.svg" rel="icon" type="image/svg+xml"/>
 <link href="css/icons.css" rel="stylesheet"/>
 <link href="css/tailwind.css" rel="stylesheet"/><link href="css/style.css" rel="stylesheet"/>
-<script defer="" src="js/menu.js"></script></head>
+<link href="css/trainers.css" rel="stylesheet"/>
+<script defer src="js/menu.js"></script>
+<script defer src="js/trainers-data.js"></script>
+<script defer src="js/trainers.js"></script>
+</head>
 <body id="top">
 <a class="skip-link" href="#main">Перейти до вмісту</a>
 <header class="site-header border-b border-line">
@@ -123,35 +127,9 @@
 </div>
 <p class="text-sm text-muted">Обери напрям.<br/>Познайомся з командою.</p>
 </div>
-<div class="trainer-grid grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-<article class="trainer-card flex min-w-0 flex-col overflow-hidden rounded-2xl border border-line transition-shadow duration-200 hover:shadow-lg" id="trainer-one">
-<div aria-label="Олена Коваль" class="trainer-photo trainer-one aspect-square w-full" role="img"></div>
-<div class="trainer-body flex flex-1 flex-col p-6 xl:p-8">
-<p class="eyebrow text-[10px] tracking-wide">Функціональні тренування</p>
-<h3 class="mt-4">Олена Коваль</h3>
-<p class="mt-4 text-sm text-muted">Рух, який додає енергії. Увага до техніки та комфортного темпу.</p>
-<a class="card-link mt-auto flex min-h-11 items-center justify-between gap-4 pt-8 text-sm font-semibold transition-colors hover:text-accent" href="trainers.html#trainer-one">Про тренера <i aria-hidden="true" class="icon fa-arrow-up-right"></i></a>
-</div>
-</article>
-<article class="trainer-card flex min-w-0 flex-col overflow-hidden rounded-2xl border border-line transition-shadow duration-200 hover:shadow-lg" id="trainer-two">
-<div aria-label="Андрій Мельник" class="trainer-photo trainer-two aspect-square w-full" role="img"></div>
-<div class="trainer-body flex flex-1 flex-col p-6 xl:p-8">
-<p class="eyebrow text-[10px] tracking-wide">Силова підготовка</p>
-<h3 class="mt-4">Андрій Мельник</h3>
-<p class="mt-4 text-sm text-muted">Послідовна робота з навантаженням і впевненість у кожному русі.</p>
-<a class="card-link mt-auto flex min-h-11 items-center justify-between gap-4 pt-8 text-sm font-semibold transition-colors hover:text-accent" href="trainers.html#trainer-two">Про тренера <i aria-hidden="true" class="icon fa-arrow-up-right"></i></a>
-</div>
-</article>
-<article class="trainer-card flex min-w-0 flex-col overflow-hidden rounded-2xl border border-line transition-shadow duration-200 hover:shadow-lg" id="trainer-three">
-<div aria-label="Марія Бондар" class="trainer-photo trainer-three aspect-square w-full" role="img"></div>
-<div class="trainer-body flex flex-1 flex-col p-6 xl:p-8">
-<p class="eyebrow text-[10px] tracking-wide">Мобільність і баланс</p>
-<h3 class="mt-4">Марія Бондар</h3>
-<p class="mt-4 text-sm text-muted">Гнучкість, контроль тіла та уважне відновлення після навантажень.</p>
-<a class="card-link mt-auto flex min-h-11 items-center justify-between gap-4 pt-8 text-sm font-semibold transition-colors hover:text-accent" href="trainers.html#trainer-three">Про тренера <i aria-hidden="true" class="icon fa-arrow-up-right"></i></a>
-</div>
-</article>
-</div>
+<div class="trainer-grid grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" data-trainer-list></div>
+<a class="trainer-back mt-6" href="trainers.html">Переглянути всіх тренерів <span aria-hidden="true">↗</span></a>
+<p class="trainer-source">Навчальна добірка профілів Total Fitness.</p>
 </div>
 </section>
 <section aria-labelledby="contact-title" class="section contact py-16 lg:py-24 border-t border-line bg-surface" id="contact">
