@@ -88,15 +88,10 @@
   min-height: 2.75rem;
   color: var(--color-accent);
 }
-.membership-source,
 .purchase-note {
   color: var(--color-muted);
   font-size: 0.875rem;
 }
-.membership-source {
-  margin-top: 2rem;
-}
-.membership-source a,
 .purchase-agreement a {
   color: var(--color-accent);
   text-decoration: underline;

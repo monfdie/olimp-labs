@@ -142,14 +142,7 @@
   padding-block: var(--about-section-space);
 }
 .about-section-heading {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 2rem;
-  align-items: start;
   margin-bottom: 3rem;
-}
-.about-section-heading .eyebrow {
-  padding-top: 0.75rem;
 }
 .about-section-heading h2 span {
   color: var(--color-muted);
@@ -188,13 +181,6 @@
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: 1rem;
-}
-.about-card-number {
-  display: block;
-  margin-bottom: 2.5rem;
-  color: var(--color-accent);
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
 }
 .about-card h3 {
   font-size: 1.5rem;
@@ -304,7 +290,6 @@
   }
   .about-hero-grid,
   .about-story-grid,
-  .about-section-heading,
   .about-format-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -336,7 +321,6 @@
     font-size: 0.625rem;
   }
   .about-section-heading {
-    gap: 1rem;
     margin-bottom: 2rem;
   }
   .about-team img {
@@ -355,9 +339,6 @@
 @media (max-width: 479px) {
   .about-benefit-grid {
     grid-template-columns: 1fr;
-  }
-  .about-card-number {
-    margin-bottom: 1.5rem;
   }
   .about-hero-visual img {
     height: 17rem;
