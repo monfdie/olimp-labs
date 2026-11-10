@@ -22,8 +22,7 @@
 .membership-filters button:hover {
   border-color: var(--color-accent);
 }
-.membership-filters button[aria-pressed="true"],
-.membership-buy {
+.membership-filters button[aria-pressed="true"] {
   border-color: var(--color-accent);
   background: var(--color-accent);
   color: var(--color-background);
@@ -35,7 +34,6 @@
   flex-direction: column;
   gap: 0.875rem;
   padding: clamp(1.25rem, 3vw, 2rem);
-  border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
   background: var(--color-background);
 }
@@ -44,7 +42,6 @@
   padding: 0.25rem 0.625rem;
   border: 1px solid var(--color-border);
   border-radius: 2rem;
-  color: var(--color-accent);
 }
 .membership-price,
 .purchase-price {
@@ -71,15 +68,12 @@
   gap: 1rem;
   min-height: 3rem;
   padding: 0.75rem 1rem;
-  border: 1px solid transparent;
   border-radius: var(--radius-button);
   font-size: 0.875rem;
+  font-weight: 600;
 }
 .membership-card .membership-buy {
   margin-top: auto;
-}
-.membership-buy:hover {
-  background: var(--color-accent-hover);
 }
 .membership-text-link {
   display: inline-flex;

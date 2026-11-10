@@ -63,20 +63,9 @@
   justify-content: space-between;
   gap: 2rem;
   padding: 1rem 1.5rem;
-  border: 1px solid transparent;
   border-radius: var(--radius-button);
-  background: var(--color-accent);
-  color: var(--color-background);
   font-size: 0.875rem;
   font-weight: 600;
-  transition: background var(--transition), transform var(--transition);
-}
-.about-button:hover {
-  background: var(--color-accent-hover);
-  transform: translateY(-2px);
-}
-.about-button:active {
-  transform: translateY(0);
 }
 .about-link {
   display: inline-flex;
@@ -345,14 +334,5 @@
   }
   .about-hero-visual figcaption {
     font-size: 0.5rem;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .about-button,
-  .about-link {
-    transition: none;
-  }
-  .about-button:hover {
-    transform: none;
   }
 }

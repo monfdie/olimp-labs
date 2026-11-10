@@ -203,3 +203,44 @@ textarea {
 .eyebrow.text-accent { color: var(--color-accent); }
 
 }
+
+/* Keep the resting border subtle and use the brand accent for interaction. */
+:is(.plan-card, .membership-card) {
+  border: 1px solid var(--card-accent, var(--color-border));
+  box-shadow: inset 0 3px 0 var(--card-accent, transparent);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+:is(.plan-card .eyebrow, .membership-duration) {
+  color: var(--card-accent, var(--color-muted));
+  transition: color var(--transition);
+}
+:is(.button, .about-button, .membership-buy, #mobile-menu > a, #menu-toggle) {
+  border: 1px solid var(--button-fill, var(--card-accent, var(--color-input-border)));
+  background-color: var(--button-fill, var(--card-accent, transparent));
+  color: var(--button-text, var(--card-button-text, var(--color-text)));
+  transition: background-color var(--transition), border-color var(--transition),
+    color var(--transition), translate var(--transition);
+}
+:is(.plan-card, .membership-card):has(:focus-visible) {
+  --card-accent: var(--color-accent);
+  --card-button-text: var(--color-background);
+}
+:is(.button, .about-button, .membership-buy, #mobile-menu > a, #menu-toggle):not(:disabled):focus-visible {
+  --button-fill: var(--color-accent);
+  --button-text: var(--color-background);
+}
+@media (hover: hover) {
+  :is(.plan-card, .membership-card):hover {
+    --card-accent: var(--color-accent);
+    --card-button-text: var(--color-background);
+  }
+  :is(.button, .about-button, .membership-buy, #mobile-menu > a, #menu-toggle):not(:disabled):hover {
+    --button-fill: var(--color-accent);
+    --button-text: var(--color-background);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    translate: none;
+  }
+}
