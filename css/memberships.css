@@ -92,10 +92,6 @@
   color: var(--color-muted);
   font-size: 0.875rem;
 }
-.purchase-agreement a {
-  color: var(--color-accent);
-  text-decoration: underline;
-}
 .membership-table-wrap {
   margin-top: 2rem;
   overflow-x: auto;
@@ -176,24 +172,6 @@ html:has(.purchase-dialog[open]) {
 }
 .purchase-comment textarea {
   min-height: 5rem;
-}
-.purchase-agreement {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  margin-block: 1.25rem;
-  font-size: 0.8125rem;
-}
-.purchase-agreement input {
-  width: 1.125rem;
-  min-height: 0;
-  height: 1.125rem;
-  margin-top: 0.125rem;
-  accent-color: var(--color-accent);
-}
-.purchase-agreement label {
-  margin: 0;
-  cursor: pointer;
 }
 .purchase-confirmation p {
   margin-block: 0.75rem 1.25rem;
