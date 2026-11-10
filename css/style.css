@@ -1,0 +1,205 @@
+@layer base {
+/* Olimp Lab 6: brand typography, triptych crop, form controls and complex selectors. */
+:root {
+
+  --color-background: #0d0f12;
+  --color-surface: #16191e;
+  --color-surface-raised: #1e2229;
+  --color-text: #f4f5f7;
+  --color-muted: #a1a8b4;
+  --color-accent: #ccff00;
+  --color-accent-hover: #dcff52;
+  --color-focus: #00f0ff;
+  --color-border: #343a44;
+  --color-input-border: #707986;
+
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-heading: "Source Sans 3", system-ui, sans-serif;
+
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+
+  --radius-button: 0.25rem;
+  --radius-card: 1rem;
+  --container: 80rem;
+  --transition: 180ms ease;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--space-6);
+}
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  font: 400 1rem/1.65 var(--font-body);
+}
+h1,
+h2,
+h3,
+p,
+figure {
+  margin: 0;
+}
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.05;
+}
+h1 {
+  font-size: clamp(3.75rem, 6.5vw, 6.5rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+}
+h2 {
+  font-size: clamp(2.5rem, 4vw, 3.75rem);
+  letter-spacing: -0.035em;
+}
+h3 {
+  font-size: 1.75rem;
+  letter-spacing: -0.025em;
+}
+p {
+  text-wrap: pretty;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button,
+select {
+  cursor: pointer;
+}
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 5px;
+}
+main:focus {
+  outline: none;
+}
+.eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+.skip-link {
+  position: absolute;
+  z-index: 10;
+  top: -6rem;
+  left: var(--space-4);
+  padding: var(--space-4);
+  background: var(--color-accent);
+  color: var(--color-background);
+}
+.skip-link:focus {
+  top: var(--space-4);
+}
+.icon {
+  font-size: 1em;
+  flex-shrink: 0;
+}
+h1 span,
+.contact h2 span {
+  color: var(--color-accent);
+}
+.feature-list li::before {
+  content: "✓";
+  color: var(--color-accent);
+  margin-right: var(--space-3);
+}
+.trainer-photo {
+
+  background-image: url("../assets/images/trainers-team.png");
+  background-size: 300% auto;
+  background-repeat: no-repeat;
+  background-position-y: top;
+  background-color: var(--color-surface);
+}
+.trainer-one {
+  background-position-x: left;
+}
+.trainer-two {
+  background-position-x: center;
+}
+.trainer-three {
+  background-position-x: right;
+}
+label {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-size: 0.8125rem;
+}
+label span {
+  color: var(--color-accent);
+}
+input,
+select,
+textarea {
+  width: 100%;
+  min-height: 50px;
+  padding: 0.75rem var(--space-4);
+  border: 1px solid var(--color-input-border);
+  border-radius: var(--radius-button);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.8125rem;
+  color-scheme: dark;
+}
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-muted);
+  opacity: 1;
+}
+textarea {
+  display: block;
+  resize: vertical;
+  min-height: 120px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
+[hidden] { display: none !important; }
+[aria-current="page"] { color: var(--color-accent); }
+.eyebrow.text-accent { color: var(--color-accent); }
+
+}

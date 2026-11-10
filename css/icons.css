@@ -1,0 +1,18 @@
+/* Font Awesome Free 6.6.0, solid subset. License: ../assets/fonts/LICENSE-fontawesome.txt */
+@font-face {
+  font-family: 'Olimp Icons';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url('../assets/fonts/fa-solid-900.woff2') format('woff2');
+}
+.fa-arrow-up-right {
+  font-family: 'Olimp Icons';
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1;
+  display: inline-block;
+}
+.fa-arrow-up-right::before {
+  content: '\f35d';
+}
