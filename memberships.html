@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Olimp — фітнес у власному темпі. Абонементи, тренери та форма зв’язку." name="description"/>
+<meta content="Клубні карти Olimp. Порівняй ціни й умови та обери абонемент від одного відвідування до року." name="description"/>
 <meta content="#0d0f12" name="theme-color"/>
 <title>Абонементи | Olimp</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -13,7 +13,10 @@
 <link href="assets/images/logo.svg" rel="icon" type="image/svg+xml"/>
 <link href="css/icons.css" rel="stylesheet"/>
 <link href="css/tailwind.css" rel="stylesheet"/><link href="css/style.css" rel="stylesheet"/>
-<script defer="" src="js/menu.js"></script></head>
+<link href="css/memberships.css" rel="stylesheet"/>
+<script defer src="js/menu.js"></script>
+<script defer src="js/memberships.js"></script>
+</head>
 <body id="top">
 <a class="skip-link" href="#main">Перейти до вмісту</a>
 <header class="site-header border-b border-line">
@@ -34,68 +37,81 @@
 </header>
 <main id="main" tabindex="-1">
 <section class="page-intro border-b border-line py-16">
-<div class="container mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
-<p class="eyebrow">OLIMP / АБОНЕМЕНТИ</p>
-<h1 class="mt-6 text-5xl lg:text-7xl">Обирай свій ритм.</h1>
-<p class="mt-6 max-w-2xl text-muted">Три формати для різних цілей. Порівняй наповнення й обери зручний для себе.</p>
-<a class="text-link inline-flex min-h-11 items-center gap-4 text-sm transition-colors hover:text-accent mt-6" href="index.html">← На головну</a>
-</div>
+  <div class="container mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
+    <p class="eyebrow">OLIMP / АБОНЕМЕНТИ</p>
+    <h1 class="mt-6 text-5xl lg:text-7xl">Обирай свій <span>ритм.</span></h1>
+    <p class="mt-6 max-w-2xl text-muted">Від одного заняття до року тренувань. Обери час відвідування, порівняй умови й знайди свою клубну карту.</p>
+    <a class="membership-text-link mt-6" href="#compare">Порівняти формати <span aria-hidden="true">↓</span></a>
+  </div>
 </section>
 <section aria-labelledby="memberships-title" class="section memberships py-16 lg:py-24 bg-surface" id="memberships">
-<div class="container mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
-<div class="section-heading mb-8 flex flex-col gap-6 md:mb-12 md:flex-row md:items-end md:justify-between">
-<div>
-<p class="eyebrow">01 / АБОНЕМЕНТИ</p>
-<h2 class="mt-4" id="memberships-title">Знайди свій формат.</h2>
-</div>
-<p class="text-sm text-muted">Від першого тренування<br/>до регулярного руху.</p>
-</div>
-<div class="plan-grid grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-<article class="plan-card flex min-w-0 flex-col rounded-2xl border border-line bg-ink p-6 xl:p-8" id="plan-start">
-<div class="plan-top flex items-center justify-between gap-4">
-<p class="eyebrow text-[10px] tracking-wide">Для самостійного старту</p>
-<span aria-hidden="true" class="plan-number text-xs text-muted">01</span>
-</div>
-<h3 class="mt-6 text-4xl">Start</h3>
-<p class="price mt-6 flex flex-wrap items-baseline gap-2 font-heading text-5xl font-bold tracking-tight">790<span class="font-body text-xs font-normal tracking-normal text-muted"> грн / місяць</span></p>
-<ul class="feature-list my-6 border-t border-line py-6 text-sm text-muted">
-<li class="py-2">Тренажерна зала</li>
-<li class="py-2">8 відвідувань на місяць</li>
-<li class="py-2">Вступне знайомство з клубом</li>
-</ul>
-<a class="button button-outline inline-flex min-h-13 items-center justify-between gap-4 rounded border px-6 py-3.5 text-sm font-semibold transition duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:translate-y-0 border-input bg-transparent text-paper hover:bg-raised mt-auto" href="memberships.html#plan-start">Детальніше про Start <i aria-hidden="true" class="icon fa-arrow-up-right"></i></a>
-</article>
-<article class="plan-card plan-featured flex min-w-0 flex-col rounded-2xl border bg-ink p-6 xl:p-8 border-accent shadow-[inset_0_3px_0_#ccff00]" id="plan-balance">
-<div class="plan-top flex items-center justify-between gap-4">
-<p class="eyebrow text-[10px] tracking-wide text-accent">Для твого стабільного ритму</p>
-<span aria-hidden="true" class="plan-number text-xs text-muted">02</span>
-</div>
-<h3 class="mt-6 text-4xl">Balance</h3>
-<p class="price mt-6 flex flex-wrap items-baseline gap-2 font-heading text-5xl font-bold tracking-tight">1 290<span class="font-body text-xs font-normal tracking-normal text-muted"> грн / місяць</span></p>
-<ul class="feature-list my-6 border-t border-line py-6 text-sm text-muted">
-<li class="py-2">Тренажерна зала без обмежень</li>
-<li class="py-2">Групові заняття</li>
-<li class="py-2">Усі напрями тренувань</li>
-</ul>
-<a class="button inline-flex min-h-13 items-center justify-between gap-4 rounded border border-transparent bg-accent px-6 py-3.5 text-sm font-semibold text-ink transition duration-200 hover:-translate-y-0.5 hover:bg-accent-hover active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:translate-y-0 mt-auto" href="memberships.html#plan-balance">Детальніше про Balance <i aria-hidden="true" class="icon fa-arrow-up-right"></i></a>
-</article>
-<article class="plan-card flex min-w-0 flex-col rounded-2xl border border-line bg-ink p-6 xl:p-8" id="plan-pro">
-<div class="plan-top flex items-center justify-between gap-4">
-<p class="eyebrow text-[10px] tracking-wide">Для персонального підходу</p>
-<span aria-hidden="true" class="plan-number text-xs text-muted">03</span>
-</div>
-<h3 class="mt-6 text-4xl">Pro</h3>
-<p class="price mt-6 flex flex-wrap items-baseline gap-2 font-heading text-5xl font-bold tracking-tight">1 990<span class="font-body text-xs font-normal tracking-normal text-muted"> грн / місяць</span></p>
-<ul class="feature-list my-6 border-t border-line py-6 text-sm text-muted">
-<li class="py-2">Усе з абонемента Balance</li>
-<li class="py-2">2 персональні тренування</li>
-<li class="py-2">Індивідуальне обговорення цілей</li>
-</ul>
-<a class="button button-outline inline-flex min-h-13 items-center justify-between gap-4 rounded border px-6 py-3.5 text-sm font-semibold transition duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:translate-y-0 border-input bg-transparent text-paper hover:bg-raised mt-auto" href="memberships.html#plan-pro">Детальніше про Pro <i aria-hidden="true" class="icon fa-arrow-up-right"></i></a>
-</article>
-</div>
-</div>
+  <div class="container mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
+    <p class="eyebrow">01 / КЛУБНІ КАРТИ</p>
+    <h2 class="mt-4" id="memberships-title">Знайди свій формат.</h2>
+    <div class="membership-toolbar">
+      <div id="membership-filters" class="membership-filters" role="group" aria-label="Термін дії абонемента">
+        <button type="button" data-period="all" aria-pressed="true">Усі</button>
+        <button type="button" data-period="visit" aria-pressed="false">Разова</button>
+        <button type="button" data-period="month" aria-pressed="false">Місяць</button>
+        <button type="button" data-period="quarter" aria-pressed="false">Три місяці</button>
+        <button type="button" data-period="half-year" aria-pressed="false">Півроку</button>
+        <button type="button" data-period="year" aria-pressed="false">Рік</button>
+      </div>
+      <p id="membership-count" class="text-sm text-muted" role="status"></p>
+    </div>
+    <div id="membership-grid" class="plan-grid grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+    <noscript><p>Для перегляду каталогу увімкни JavaScript або відкрий <a class="membership-text-link" href="https://olimp-strong.com.ua/cards">офіційні клубні карти</a>.</p></noscript>
+    <template id="membership-card">
+      <article class="membership-card">
+        <p class="eyebrow membership-duration"></p>
+        <h3></h3>
+        <p class="membership-price"></p>
+        <ul class="feature-list"></ul>
+        <button type="button" class="membership-buy">Придбати <span aria-hidden="true">↗</span></button>
+      </article>
+    </template>
+    <p class="membership-source">Ціни й умови взято з <a href="https://olimp-strong.com.ua/cards">каталогу клубу «Олімп»</a>. Перед оплатою перевір чинні умови та правила активації.</p>
+  </div>
 </section>
+<section id="compare" class="py-16 lg:py-24" aria-labelledby="compare-title">
+  <div class="container mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
+    <p class="eyebrow">02 / ПОРІВНЯННЯ</p>
+    <h2 class="mt-4" id="compare-title">Яка карта тобі підходить?</h2>
+    <div class="membership-table-wrap" role="region" aria-label="Порівняння клубних карт" tabindex="0">
+      <table class="membership-table">
+        <thead><tr><th scope="col">Карта</th><th scope="col">Години доступу</th><th scope="col">Групові заняття</th><th scope="col">Сауна</th></tr></thead>
+        <tbody id="membership-comparison"></tbody>
+      </table>
+    </div>
+    <a class="membership-text-link mt-6" href="contact.html">Уточнити умови <span aria-hidden="true">↗</span></a>
+  </div>
+</section>
+<dialog id="purchase-dialog" class="purchase-dialog" aria-labelledby="purchase-title" aria-describedby="purchase-note">
+  <button type="button" class="purchase-close" aria-label="Закрити вікно" autofocus>×</button>
+  <p class="eyebrow">OLIMP / ОФОРМЛЕННЯ</p>
+  <h2 id="purchase-title"></h2>
+  <p id="purchase-price" class="purchase-price"></p>
+  <p id="purchase-note" class="purchase-note">Демонстрація оформлення. Дані залишаються в браузері. Оплата через LiqPay доступна на сайті клубу.</p>
+  <form id="purchase-form" method="dialog">
+    <div class="purchase-fields">
+      <div><label for="purchase-first-name">Ім’я <span aria-hidden="true">*</span></label><input id="purchase-first-name" autocomplete="given-name" required maxlength="80" pattern=".*\S.*" placeholder="Ім’я"/></div>
+      <div><label for="purchase-last-name">Прізвище <span aria-hidden="true">*</span></label><input id="purchase-last-name" autocomplete="family-name" required maxlength="80" pattern=".*\S.*" placeholder="Прізвище"/></div>
+      <div><label for="purchase-phone">Телефон <span aria-hidden="true">*</span></label><input id="purchase-phone" type="tel" autocomplete="tel" required maxlength="24" placeholder="099 123 45 67"/></div>
+      <div><label for="purchase-email">Email <span aria-hidden="true">*</span></label><input id="purchase-email" type="email" autocomplete="email" required maxlength="120" placeholder="name@example.com"/></div>
+      <div class="purchase-comment"><label for="purchase-comment">Коментар</label><textarea id="purchase-comment" rows="2" maxlength="500" placeholder="Додаткова інформація"></textarea></div>
+    </div>
+    <div class="purchase-agreement">
+      <input id="purchase-terms" type="checkbox" required/>
+      <div><label for="purchase-terms">Я ознайомився(-лася) з офертою</label><a href="https://olimp-strong.com.ua/oferta" target="_blank" rel="noopener">Прочитати оферту клубу ↗</a></div>
+    </div>
+    <button type="submit" class="membership-buy">Підтвердити дані <span aria-hidden="true">↗</span></button>
+  </form>
+  <div id="purchase-confirmation" class="purchase-confirmation" hidden>
+    <h3 tabindex="-1">Дані перевірено</h3>
+    <p>Для оформлення обери цю карту в офіційному каталозі. Введені тут дані не передаються.</p>
+    <a class="membership-buy" href="https://olimp-strong.com.ua/cards" target="_blank" rel="noopener">До офіційного каталогу <span aria-hidden="true">↗</span></a>
+  </div>
+</dialog>
 </main>
 <footer class="site-footer border-t border-line">
 <div class="container footer-grid mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10 grid grid-cols-1 gap-8 py-16 md:grid-cols-2 lg:grid-cols-4">

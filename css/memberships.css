@@ -1,0 +1,217 @@
+.membership-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-block: 2rem;
+}
+.membership-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.membership-filters button {
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-button);
+  color: var(--color-text);
+  font-size: 0.875rem;
+}
+.membership-filters button:hover {
+  border-color: var(--color-accent);
+}
+.membership-filters button[aria-pressed="true"],
+.membership-buy {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-background);
+  font-weight: 600;
+}
+.membership-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.875rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-background);
+}
+.membership-duration {
+  align-self: flex-start;
+  padding: 0.25rem 0.625rem;
+  border: 1px solid var(--color-border);
+  border-radius: 2rem;
+  color: var(--color-accent);
+}
+.membership-price,
+.purchase-price {
+  font: 700 clamp(2.25rem, 5vw, 3rem)/1.1 var(--font-heading);
+  font-variant-numeric: tabular-nums;
+}
+.membership-card .feature-list {
+  display: grid;
+  gap: 0.625rem;
+  margin-block: 0.25rem 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-muted);
+  font-size: 0.875rem;
+}
+.membership-card .feature-list li {
+  display: flex;
+  align-items: baseline;
+}
+.membership-buy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 3rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-button);
+  font-size: 0.875rem;
+}
+.membership-card .membership-buy {
+  margin-top: auto;
+}
+.membership-buy:hover {
+  background: var(--color-accent-hover);
+}
+.membership-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 2.75rem;
+  color: var(--color-accent);
+}
+.membership-source,
+.purchase-note {
+  color: var(--color-muted);
+  font-size: 0.875rem;
+}
+.membership-source {
+  margin-top: 2rem;
+}
+.membership-source a,
+.purchase-agreement a {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+.membership-table-wrap {
+  margin-top: 2rem;
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+.membership-table {
+  width: 100%;
+  min-width: 33rem;
+  text-align: left;
+}
+.membership-table th,
+.membership-table td {
+  padding: 1rem;
+}
+.membership-table thead {
+  background: var(--color-surface);
+}
+.membership-table tbody tr {
+  border-top: 1px solid var(--color-border);
+}
+.membership-table td {
+  color: var(--color-muted);
+}
+.purchase-dialog {
+  position: fixed;
+  inset: 0;
+  width: min(38rem, calc(100% - 1.5rem));
+  max-height: calc(100dvh - 1.5rem);
+  margin: auto;
+  padding: clamp(1rem, 4vw, 2rem);
+  overflow: auto;
+  overscroll-behavior: contain;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+.purchase-dialog::backdrop {
+  background: rgb(0 0 0 / 76%);
+}
+html:has(.purchase-dialog[open]) {
+  overflow: hidden;
+}
+.purchase-dialog > .eyebrow {
+  padding-right: 3rem;
+}
+.purchase-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: var(--radius-button);
+  font-size: 1.75rem;
+  line-height: 1;
+}
+.purchase-close:hover {
+  background: var(--color-surface-raised);
+}
+.purchase-dialog h2 {
+  margin-block: 0.75rem;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+}
+.purchase-price {
+  color: var(--color-accent);
+}
+.purchase-note {
+  margin-block: 0.75rem 1.5rem;
+}
+.purchase-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.purchase-comment {
+  grid-column: 1 / -1;
+}
+.purchase-comment textarea {
+  min-height: 5rem;
+}
+.purchase-agreement {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-block: 1.25rem;
+  font-size: 0.8125rem;
+}
+.purchase-agreement input {
+  width: 1.125rem;
+  min-height: 0;
+  height: 1.125rem;
+  margin-top: 0.125rem;
+  accent-color: var(--color-accent);
+}
+.purchase-agreement label {
+  margin: 0;
+  cursor: pointer;
+}
+.purchase-confirmation p {
+  margin-block: 0.75rem 1.25rem;
+}
+@media (max-width: 480px) {
+  .purchase-fields {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  .purchase-note {
+    margin-bottom: 1rem;
+  }
+  .purchase-fields input {
+    min-height: 2.75rem;
+  }
+}
