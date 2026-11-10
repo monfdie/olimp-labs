@@ -5,6 +5,7 @@
   const format = trainer => trainer.group ? 'Групові заняття' : 'Персональні тренування';
 
   function createCard(trainer) {
+    const club = clubs[trainer.club];
     const card = document.createElement('article');
     card.className = 'trainer-catalog-card';
     card.innerHTML = `
@@ -22,7 +23,7 @@
     link.href = `trainer.html?id=${encodeURIComponent(trainer.id)}`;
     card.querySelector('.trainer-card-format').textContent = format(trainer);
     card.querySelector('h3').textContent = trainer.name;
-    card.querySelector('.trainer-card-location').textContent = `${trainer.club.city} · ${trainer.club.name}`;
+    card.querySelector('.trainer-card-location').textContent = `${club.city} · ${club.name}`;
     card.querySelector('.trainer-card-specialty').textContent = trainer.specialties.slice(0, 2).join(' · ');
     return card;
   }
@@ -46,10 +47,12 @@
     document.title = `${trainer.name} | Olimp`;
     setText('name', trainer.name);
     setText('type', format(trainer));
-    setText('location', `${trainer.club.city} · ${trainer.club.name}`);
+    const club = clubs[trainer.club];
+    setText('location', `${club.city} · ${club.name}`);
     setText('about', trainer.about);
-    setText('club', trainer.club.name);
-    setText('address', `${trainer.club.city}, ${trainer.club.address}`);
+    setText('club', club.name);
+    setText('address', `${club.city}, ${club.address}`);
+    profile.querySelector('#trainer-club-map').href = `clubs.html?club=${trainer.club}#club-map`;
 
     const sections = [
       ['Спеціалізація', trainer.specialties],
