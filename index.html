@@ -14,10 +14,12 @@
 <link href="css/icons.css" rel="stylesheet"/>
 <link href="css/tailwind.css" rel="stylesheet"/><link href="css/style.css" rel="stylesheet"/>
 <link href="css/trainers.css" rel="stylesheet"/>
+<link href="css/home.css" rel="stylesheet"/>
 <script defer src="js/menu.js"></script>
 <script defer src="js/clubs-data.js"></script>
 <script defer src="js/trainers-data.js"></script>
 <script defer src="js/trainers.js"></script>
+<script defer src="js/home.js"></script>
 </head>
 <body id="top">
 <a class="skip-link" href="#main">Перейти до вмісту</a>
@@ -63,6 +65,37 @@
 </figcaption>
 </figure>
 </div>
+</section>
+<section id="benefits" aria-labelledby="benefits-title" class="py-16 border-t border-line bg-surface">
+  <div class="container mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
+    <p class="eyebrow">ПЕРЕВАГИ</p>
+    <h2 class="mt-4" id="benefits-title">Тренуйся у своєму ритмі.</h2>
+    <div class="home-features">
+      <article class="home-feature"><strong>13</strong><h3>Локацій</h3><p>Обери зал поруч із домом або роботою у Львові чи Сокільниках.</p></article>
+      <article class="home-feature"><strong>07:00</strong><h3>Ранній старт</h3><p>З понеділка по суботу зали працюють до 22:00. У неділю — з 09:00 до 19:00.</p></article>
+      <article class="home-feature"><strong>1 візит</strong><h3>Щоб спробувати</h3><p>Почни з разового відвідування або обери абонемент на довший термін.</p></article>
+    </div>
+  </div>
+</section>
+<section id="services" aria-labelledby="services-title" class="py-16 border-t border-line">
+  <div class="container mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
+    <p class="eyebrow">ПОСЛУГИ</p>
+    <h2 class="mt-4" id="services-title">Обери, як тренуватися.</h2>
+    <div class="home-features">
+      <article class="home-feature">
+        <h3>Самостійні тренування</h3><p>Силові тренажери, вільні ваги та кардіозони для занять за власною програмою.</p>
+        <a class="text-link inline-flex min-h-11 items-center gap-3 text-sm transition-colors hover:text-accent" href="clubs.html">Переглянути зали <span aria-hidden="true">↗</span></a>
+      </article>
+      <article class="home-feature">
+        <h3>Групові заняття</h3><p>Фітнес, йога та функціональні заняття. Доступні напрями залежать від локації.</p>
+        <a class="text-link inline-flex min-h-11 items-center gap-3 text-sm transition-colors hover:text-accent" href="memberships.html#compare">Порівняти абонементи <span aria-hidden="true">↗</span></a>
+      </article>
+      <article class="home-feature">
+        <h3>Персональні тренування</h3><p>Працюй над технікою й навантаженням разом із тренером, який спеціалізується на твоєму напрямі.</p>
+        <a class="text-link inline-flex min-h-11 items-center gap-3 text-sm transition-colors hover:text-accent" href="trainers.html">Знайти тренера <span aria-hidden="true">↗</span></a>
+      </article>
+    </div>
+  </div>
 </section>
 <section aria-labelledby="memberships-title" class="section memberships py-16 lg:py-24 bg-surface" id="memberships">
 <div class="container mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
@@ -127,6 +160,21 @@
 <a class="trainer-back mt-6" href="trainers.html">Переглянути всіх тренерів <span aria-hidden="true">↗</span></a>
 </div>
 </section>
+<section id="about-club" aria-labelledby="home-about-title" class="py-16 border-t border-line">
+  <div class="container home-about mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
+    <div>
+      <p class="eyebrow">ПРО КЛУБ</p>
+      <h2 class="mt-4" id="home-about-title">Olimp у Львові.</h2>
+      <p>З 2012 року мережа об’єднує тих, хто тільки починає тренуватися, і тих, хто вже працює над наступною спортивною ціллю.</p>
+      <a class="button inline-flex min-h-11 items-center gap-3 rounded px-4 py-2 text-sm font-semibold" href="about.html">Більше про клуб <span aria-hidden="true">↗</span></a>
+    </div>
+    <figure>
+      <!-- Відеоогляд залу Olimp Premium. -->
+      <iframe class="home-frame home-video" src="https://www.youtube-nocookie.com/embed/2vPPBehCnkA" title="Відеоогляд залу Олімп Преміум" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+      <figcaption class="mt-3 text-sm text-muted">Олімп Преміум, Львів · <a class="text-link hover:text-accent" href="https://www.youtube.com/watch?v=2vPPBehCnkA">Відкрити відео на YouTube ↗</a></figcaption>
+    </figure>
+  </div>
+</section>
 <section aria-labelledby="contact-title" class="section contact py-16 lg:py-24 border-t border-line bg-surface" id="contact">
 <div class="container contact-layout mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10 grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-16">
 <div class="contact-copy">
@@ -166,6 +214,35 @@
 </button>
 </form>
 </div>
+<div class="container mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
+  <div class="home-visit-grid">
+    <section class="home-visit-card" aria-labelledby="home-map-title">
+      <h3 id="home-map-title">Олімп Premium на карті</h3>
+      <p id="home-map-address">Львів, пл. Старий Ринок, 8</p>
+      <!-- Карта залу у Львові. Позначка підставляється з каталогу залів. -->
+      <iframe id="home-map" class="home-frame home-map" title="Карта Google Maps — Олімп Premium" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <a class="text-link mt-3 inline-flex min-h-11 items-center gap-3 text-sm transition-colors hover:text-accent" href="clubs.html?club=premium#club-map">Вибрати інший зал <span aria-hidden="true">↗</span></a>
+    </section>
+    <aside class="home-visit-card" aria-labelledby="home-weather-title">
+      <h3 id="home-weather-title">Погода у Львові</h3>
+      <p>Прогноз на три дні для планування візиту.</p>
+      <!-- Сторонній віджет прогнозу погоди meteoblue. -->
+      <iframe class="home-frame home-weather" src="https://www.meteoblue.com/uk/weather/widget/daily/lviv_ukraine_702550?geoloc=fixed&amp;days=3&amp;tempunit=CELSIUS&amp;windunit=KILOMETER_PER_HOUR&amp;layout=dark" title="Прогноз погоди у Львові від meteoblue" loading="lazy"></iframe>
+      <a class="text-link mt-3 inline-flex min-h-11 items-center gap-3 text-sm transition-colors hover:text-accent" href="https://www.meteoblue.com/uk/weather/week/lviv_ukraine_702550">Прогноз meteoblue <span aria-hidden="true">↗</span></a>
+    </aside>
+  </div>
+</div>
+</section>
+<section id="start" aria-labelledby="start-title" class="py-16">
+  <div class="container mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
+    <div class="home-final">
+      <div>
+        <h2 id="start-title">Готовий почати?</h2>
+        <p>Порівняй години доступу, термін дії та можливості клубних карт і обери зручний варіант.</p>
+      </div>
+      <a class="button inline-flex min-h-13 items-center justify-between gap-4 rounded px-6 py-3.5 text-sm font-semibold" href="memberships.html">Обрати абонемент <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
 </section>
 </main>
 <footer class="site-footer border-t border-line">
