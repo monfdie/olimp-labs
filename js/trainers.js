@@ -3,7 +3,6 @@
   const profile = document.querySelector('#trainer-profile');
 
   const format = trainer => trainer.group ? 'Групові заняття' : 'Персональні тренування';
-  const sourceUrl = trainer => `https://totalfitness.com.ua/trainers/${trainer.id}/`;
 
   function createCard(trainer) {
     const card = document.createElement('article');
@@ -51,7 +50,6 @@
     setText('about', trainer.about);
     setText('club', trainer.club.name);
     setText('address', `${trainer.club.city}, ${trainer.club.address}`);
-    profile.querySelector('[data-trainer-source]').href = sourceUrl(trainer);
 
     const sections = [
       ['Спеціалізація', trainer.specialties],

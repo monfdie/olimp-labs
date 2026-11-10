@@ -117,9 +117,6 @@
 .trainer-club p:not(.eyebrow) {
   margin-top: 0.5rem;
 }
-.trainer-club .trainer-back {
-  margin-top: 0.75rem;
-}
 @media (max-width: 639px) {
   .trainer-profile-header,
   .trainer-detail-grid {
