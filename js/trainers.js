@@ -1,6 +1,5 @@
 (() => {
   const grid = document.querySelector('[data-trainer-list]');
-  const filters = document.querySelector('#trainer-filters');
   const profile = document.querySelector('#trainer-profile');
 
   const format = trainer => trainer.group ? 'Групові заняття' : 'Персональні тренування';
@@ -29,34 +28,9 @@
     return card;
   }
 
-  if (grid && !filters) {
-    grid.replaceChildren(...trainers.slice(0, 3).map(createCard));
-  }
-
-  if (grid && filters) {
-    const city = filters.querySelector('#trainer-city');
-    const type = filters.querySelector('#trainer-type');
-    const count = document.querySelector('#trainer-count');
-    for (const name of [...new Set(trainers.map(trainer => trainer.club.city))].sort((a, b) => a.localeCompare(b, 'uk'))) {
-      city.add(new Option(name, name));
-    }
-    const cards = trainers.map(createCard);
-    grid.replaceChildren(...cards);
-
-    function applyFilters() {
-      let total = 0;
-      trainers.forEach((trainer, index) => {
-        const matchesCity = !city.value || trainer.club.city === city.value;
-        const matchesType = !type.value || type.value === (trainer.group ? 'group' : 'personal');
-        cards[index].hidden = !(matchesCity && matchesType);
-        if (!cards[index].hidden) total += 1;
-      });
-      count.textContent = total ? `Знайдено: ${total}` : 'За цими фільтрами тренерів не знайдено.';
-    }
-
-    filters.addEventListener('change', applyFilters);
-    filters.hidden = false;
-    applyFilters();
+  if (grid) {
+    const entries = grid.dataset.trainerList === 'preview' ? trainers.slice(0, 3) : trainers;
+    grid.replaceChildren(...entries.map(createCard));
   }
 
   if (profile) {
