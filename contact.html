@@ -6,6 +6,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Контакти Olimp: телефон, електронна пошта, години роботи й адреси залів у Львові та Сокільниках." name="description"/>
 <meta content="#0d0f12" name="theme-color"/>
+<script src="js/theme.js"></script>
 <title>Контакти | Olimp</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -13,7 +14,10 @@
 <link href="assets/images/logo.svg" rel="icon" type="image/svg+xml"/>
 <link href="css/icons.css" rel="stylesheet"/>
 <link href="css/tailwind.css" rel="stylesheet"/><link href="css/style.css" rel="stylesheet"/>
-<script defer="" src="js/menu.js"></script></head>
+<link href="css/feedback.css" rel="stylesheet"/>
+<script defer="" src="js/menu.js"></script>
+<script defer src="js/feedback.js"></script>
+</head>
 <body id="top">
 <a class="skip-link" href="#main">Перейти до вмісту</a>
 <header class="site-header border-b border-line">
@@ -30,13 +34,14 @@
 </ul>
 </nav>
 <a class="button button-small items-center justify-between gap-4 rounded border border-transparent bg-accent text-sm font-semibold text-ink transition duration-200 hover:-translate-y-0.5 hover:bg-accent-hover active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:translate-y-0 min-h-11 px-4 py-2.5 hidden xl:inline-flex" href="contact.html">Зв’язатися з нами <i aria-hidden="true" class="icon fa-arrow-up-right"></i></a>
+<button class="theme-switch" type="button" hidden aria-label="Світла тема" aria-pressed="false" title="Світла тема"><span aria-hidden="true">☀</span></button>
 <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Відкрити меню" class="inline-flex min-h-11 items-center gap-3 rounded border border-line px-4 text-sm transition-colors hover:border-accent xl:hidden" id="menu-toggle" type="button"><span aria-hidden="true">☰</span><span>Меню</span></button><nav aria-label="Мобільна навігація" class="w-full border-t border-line pt-4 xl:hidden" hidden="" id="mobile-menu"><ul class="flex flex-col gap-1"><li><a class="flex min-h-11 items-center rounded px-3 text-sm text-muted transition-colors hover:bg-surface hover:text-accent aria-[current=page]:text-accent" href="index.html">Головна</a></li><li><a class="flex min-h-11 items-center rounded px-3 text-sm text-muted transition-colors hover:bg-surface hover:text-accent aria-[current=page]:text-accent" href="about.html">Про клуб</a></li><li><a class="flex min-h-11 items-center rounded px-3 text-sm text-muted transition-colors hover:bg-surface hover:text-accent aria-[current=page]:text-accent" href="memberships.html">Абонементи</a></li><li><a class="flex min-h-11 items-center rounded px-3 text-sm text-muted transition-colors hover:bg-surface hover:text-accent aria-[current=page]:text-accent" href="trainers.html">Тренери</a></li><li><a class="flex min-h-11 items-center rounded px-3 text-sm text-muted transition-colors hover:bg-surface hover:text-accent aria-[current=page]:text-accent" href="clubs.html">Зали</a></li><li><a aria-current="page" class="flex min-h-11 items-center rounded px-3 text-sm text-muted transition-colors hover:bg-surface hover:text-accent aria-[current=page]:text-accent" href="contact.html">Контакти</a></li></ul><a class="inline-flex min-h-13 items-center justify-between gap-4 rounded border border-transparent bg-accent px-6 py-3.5 text-sm font-semibold text-ink transition duration-200 hover:-translate-y-0.5 hover:bg-accent-hover active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:translate-y-0 mt-4 w-full" href="contact.html">Зв’язатися з нами <span aria-hidden="true">↗</span></a></nav></div>
 </header>
 <main id="main" tabindex="-1">
 <section class="page-intro border-b border-line py-16">
 <div class="container mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
 <p class="eyebrow">OLIMP / КОНТАКТИ</p>
-<h1 class="mt-6 text-5xl lg:text-7xl">Будьмо на зв’язку.</h1>
+<h1 class="mt-6 text-5xl lg:text-7xl">Будьмо на зв’язку</h1>
 <p class="mt-6 max-w-2xl text-muted">Постав запитання про клуб, абонементи чи тренування.</p>
 <a class="text-link inline-flex min-h-11 items-center gap-4 text-sm transition-colors hover:text-accent mt-6" href="index.html">← На головну</a>
 </div>
@@ -44,7 +49,7 @@
 <section aria-labelledby="contact-title" class="section contact py-16 lg:py-24 border-t border-line bg-surface" id="contact">
 <div class="container contact-layout mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10 grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-16">
 <div class="contact-copy">
-<h2 class="mt-6" id="contact-title">Є запитання?<br/><span>Поговорімо.</span></h2>
+<h2 class="mt-6" id="contact-title">Є запитання?<br/><span>Поговорімо</span></h2>
 <p class="mt-8 max-w-md text-muted">
               Допоможемо визначитися з форматом, напрямом або першим візитом. Розкажи, що тебе
               цікавить.
@@ -65,31 +70,69 @@
 </dl>
 <a class="button mt-6 inline-flex min-h-11 items-center gap-3 rounded px-4 py-2 text-sm font-semibold" href="clubs.html#club-map">Переглянути зали на карті <span aria-hidden="true">↗</span></a>
 </div>
-<form action="contact-success.html" aria-describedby="form-note" class="contact-form rounded-2xl border border-line bg-ink p-5 sm:p-6 xl:p-8" method="get">
-<div class="form-row grid grid-cols-1 gap-x-4 md:grid-cols-2">
-<div class="field mb-6 min-w-0">
-<label for="contact-name">Ім’я <span aria-hidden="true">*</span></label><input autocomplete="given-name" id="contact-name" maxlength="80" placeholder="Як до тебе звертатися?" required=""/>
-</div>
-<div class="field mb-6 min-w-0">
-<label for="contact-email">Email <span aria-hidden="true">*</span></label><input autocomplete="email" id="contact-email" maxlength="120" placeholder="name@example.com" required="" type="email"/>
-</div>
-</div>
-<div class="field mb-6 min-w-0">
-<label for="contact-topic">Тема звернення</label><select id="contact-topic">
-<option>Обрати абонемент</option>
-<option>Заняття з тренером</option>
-<option>Зали та години роботи</option>
-<option>Інше запитання</option>
-</select>
-</div>
-<div class="field mb-6 min-w-0">
-<label for="contact-message">Повідомлення <span aria-hidden="true">*</span></label><textarea id="contact-message" maxlength="1500" placeholder="Напиши своє запитання…" required="" rows="4"></textarea>
-</div>
-<p class="form-note text-xs text-muted" id="form-note">Поля з * обов’язкові. Це демонстраційна форма для перевірки даних.</p>
-<button class="button inline-flex min-h-13 items-center justify-between gap-4 rounded border border-transparent bg-accent px-6 py-3.5 text-sm font-semibold text-ink transition duration-200 hover:-translate-y-0.5 hover:bg-accent-hover active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:translate-y-0 mt-6 w-full" type="submit">
-              Перевірити форму <i aria-hidden="true" class="icon fa-arrow-up-right"></i>
-</button>
+<form id="feedback-form" aria-labelledby="feedback-title" aria-describedby="form-note" class="feedback-form min-w-0 rounded-2xl border border-line bg-ink p-5 sm:p-6 xl:p-8" method="post" novalidate>
+  <h3 id="feedback-title">Напишіть нам</h3>
+  <p class="mt-3 text-sm text-muted" id="form-note">Демонстраційна форма. Поля з * обов’язкові.</p>
+  <p class="mt-3 text-sm" id="feedback-unavailable">Для перевірки форми потрібен JavaScript.</p>
+  <fieldset disabled>
+    <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+      <div class="min-w-0">
+        <label for="contact-name">Ім’я <span aria-hidden="true">*</span></label>
+        <input type="text" id="contact-name" name="name" autocomplete="given-name" minlength="2" maxlength="80" required>
+        <p class="feedback-error" id="contact-name-error" aria-hidden="true">Введіть щонайменше 2 символи.</p>
+      </div>
+      <div class="min-w-0">
+        <label for="contact-email">Email <span aria-hidden="true">*</span></label>
+        <input type="email" id="contact-email" name="email" autocomplete="email" maxlength="120" placeholder="name@example.com" required>
+        <p class="feedback-error" id="contact-email-error" aria-hidden="true">Формат email: name@example.com.</p>
+      </div>
+      <div class="min-w-0">
+        <label for="contact-phone">Телефон <span aria-hidden="true">*</span></label>
+        <input type="tel" id="contact-phone" name="phone" autocomplete="tel" placeholder="+380501234567" aria-describedby="contact-phone-hint" required>
+        <p class="feedback-help text-muted" id="contact-phone-hint">+380 і 9 цифр без пробілів.</p>
+        <p class="feedback-error" id="contact-phone-error" aria-hidden="true">Формат номера: +380501234567.</p>
+      </div>
+      <div class="min-w-0">
+        <label for="contact-topic">Тема звернення</label>
+        <select id="contact-topic" name="topic">
+          <option value="">Оберіть тему за бажанням</option>
+          <option>Обрати абонемент</option>
+          <option>Заняття з тренером</option>
+          <option>Зали та години роботи</option>
+          <option>Інше запитання</option>
+        </select>
+      </div>
+    </div>
+    <div class="mt-6">
+      <label for="contact-message">Повідомлення <span aria-hidden="true">*</span></label>
+      <textarea id="contact-message" name="message" minlength="10" maxlength="1500" required rows="4"></textarea>
+      <p class="feedback-error" id="contact-message-error" aria-hidden="true">Введіть повідомлення від 10 символів.</p>
+    </div>
+    <div class="mt-4">
+      <label class="feedback-consent" for="contact-consent">
+        <input type="checkbox" id="contact-consent" name="consent" required>
+        <span>Погоджуюся з політикою конфіденційності <span aria-hidden="true">*</span></span>
+      </label>
+      <p class="feedback-error" id="contact-consent-error" aria-hidden="true">Підтвердьте згоду, щоб продовжити.</p>
+      <details class="feedback-policy text-sm text-muted">
+        <summary>Політика конфіденційності форми</summary>
+        <p>Введені дані обробляються на цій сторінці в браузері. Після успішної перевірки форма очищується.</p>
+      </details>
+    </div>
+    <button class="button mt-6 inline-flex min-h-13 w-full items-center justify-between gap-4 rounded border border-transparent bg-accent px-6 py-3.5 text-sm font-semibold text-ink transition duration-200 hover:-translate-y-0.5 hover:bg-accent-hover active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:translate-y-0" type="submit">
+      Надіслати <i aria-hidden="true" class="icon fa-arrow-up-right"></i>
+    </button>
+  </fieldset>
 </form>
+<dialog class="feedback-dialog rounded-2xl" id="feedback-dialog" aria-labelledby="feedback-dialog-title" aria-describedby="feedback-dialog-note">
+  <div class="p-5 sm:p-6">
+    <h3 id="feedback-dialog-title">Форму перевірено</h3>
+    <p class="mt-3 text-muted" id="feedback-dialog-note">Дякуємо! Усі поля заповнені правильно. Це демонстрація надсилання.</p>
+    <form method="dialog">
+      <button class="button mt-6 inline-flex min-h-11 items-center rounded bg-accent px-4 py-2.5 text-sm font-semibold text-ink hover:bg-accent-hover" type="submit" autofocus>Закрити</button>
+    </form>
+  </div>
+</dialog>
 </div>
 </section>
 </main>

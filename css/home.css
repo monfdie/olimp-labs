@@ -90,3 +90,35 @@
     grid-template-columns: 1fr;
   }
 }
+
+#hero-title {
+  font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+  line-height: 1.04;
+}
+:is(.home-feature, .home-visit-card, .home-final, .home-frame, .hero-image img, .feedback-form) {
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+:is(.home-feature, .home-visit-card, .home-final, .feedback-form):focus-within {
+  border-color: var(--color-accent);
+}
+@media (hover: hover) {
+  :is(.home-feature, .home-visit-card, .home-final, .home-frame, .feedback-form):hover,
+  .hero-image:hover img {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 1px var(--color-accent), 0 6px 22px color-mix(in srgb, var(--color-accent) 14%, transparent);
+  }
+  :is(.hero-copy, .home-about, .home-final, #main) :is(h1, h2, h3, p, figcaption),
+  :is(.site-header, .site-footer) .logo {
+    transition: color var(--transition), filter var(--transition);
+  }
+  #main :is(h1, h2, h3, p, figcaption):hover,
+  .feedback-policy summary:hover {
+    color: var(--color-accent);
+  }
+  .logo:hover {
+    filter: drop-shadow(0 0 4px color-mix(in srgb, var(--color-accent) 70%, transparent));
+  }
+  .feedback-form :is(input, select, textarea):hover {
+    border-color: var(--color-accent);
+  }
+}

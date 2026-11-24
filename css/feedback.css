@@ -1,0 +1,108 @@
+.feedback-form fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.feedback-form label {
+  display: block;
+  margin-bottom: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.feedback-form :is(input:not([type="checkbox"]), textarea, select) {
+  display: block;
+  width: 100%;
+  min-height: 2.875rem;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid var(--color-input-border);
+  border-radius: 0.5rem;
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.feedback-form :is(input, textarea)::placeholder {
+  color: var(--color-muted);
+}
+
+.feedback-form textarea {
+  resize: vertical;
+}
+
+.feedback-form :is(input, textarea, select) {
+  color-scheme: inherit;
+}
+
+.feedback-form :is(input, textarea)[data-state="invalid"] {
+  border-color: var(--feedback-error);
+}
+
+.feedback-form :is(input, textarea)[data-state="valid"] {
+  border-color: var(--feedback-valid);
+}
+
+.feedback-help,
+.feedback-error {
+  margin-top: 0.375rem;
+  font-size: 0.8125rem;
+}
+
+.feedback-error {
+  color: var(--feedback-error);
+}
+
+/* Keep the next control in place when an error appears on blur. */
+.feedback-error[aria-hidden="true"] {
+  visibility: hidden;
+}
+
+.feedback-form .feedback-consent {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  min-height: 2.75rem;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.feedback-consent input {
+  flex: none;
+  width: 1.125rem;
+  height: 1.125rem;
+  margin: 0;
+  accent-color: var(--color-accent);
+}
+
+.feedback-consent input[data-state="invalid"] {
+  outline: 1px solid var(--feedback-error);
+  outline-offset: 2px;
+}
+
+.feedback-consent input[data-state="invalid"]:focus-visible {
+  outline: 3px solid var(--color-focus);
+}
+
+.feedback-policy summary {
+  width: fit-content;
+  padding-block: 0.625rem;
+  cursor: pointer;
+}
+
+.feedback-dialog {
+  position: fixed;
+  inset: 0;
+  width: min(28rem, calc(100% - 2rem));
+  max-height: calc(100% - 2rem);
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+
+.feedback-dialog::backdrop {
+  background: rgb(0 0 0 / 75%);
+}

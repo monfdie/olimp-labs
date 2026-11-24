@@ -10,7 +10,7 @@
     card.className = 'trainer-catalog-card';
     card.innerHTML = `
       <a class="trainer-card-link">
-        <div class="trainer-placeholder" aria-hidden="true"></div>
+        <img class="trainer-portrait" loading="lazy" decoding="async" alt="">
         <div class="trainer-catalog-body">
           <p class="eyebrow trainer-card-format"></p>
           <h3></h3>
@@ -20,6 +20,7 @@
         </div>
       </a>`;
     const link = card.querySelector('a');
+    card.querySelector('img').src = trainer.photo;
     link.href = `trainer.html?id=${encodeURIComponent(trainer.id)}`;
     card.querySelector('.trainer-card-format').textContent = format(trainer);
     card.querySelector('h3').textContent = trainer.name;
@@ -45,6 +46,9 @@
       profile.querySelector(`[data-trainer-field="${field}"]`).textContent = value;
     };
     document.title = `${trainer.name} | Olimp`;
+    const portrait = profile.querySelector('.trainer-profile-photo');
+    portrait.alt = trainer.name;
+    portrait.src = trainer.photo;
     setText('name', trainer.name);
     setText('type', format(trainer));
     const club = clubs[trainer.club];
