@@ -11,7 +11,6 @@ const rules = {
   name: field => [...field.value.trim()].length >= 2,
   email: field => EMAIL_PATTERN.test(field.value.trim()),
   phone: field => PHONE_PATTERN.test(field.value.trim()),
-  message: field => [...field.value.trim()].length >= 10,
   consent: field => field.checked,
 };
 
