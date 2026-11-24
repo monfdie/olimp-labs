@@ -14,10 +14,15 @@
 <link href="assets/images/logo.svg" rel="icon" type="image/svg+xml"/>
 <link href="css/icons.css" rel="stylesheet"/>
 <link href="css/tailwind.css" rel="stylesheet"/><link href="css/style.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" rel="stylesheet"/>
 <link href="css/clubs.css" rel="stylesheet"/>
 <script defer src="js/menu.js"></script>
 <script defer src="js/clubs-data.js"></script>
 <script defer src="js/clubs.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script defer src="js/club-gallery.js"></script>
 </head>
 <body id="top">
 <a class="skip-link" href="#main">Перейти до вмісту</a>
@@ -45,6 +50,80 @@
     <h1 class="mt-6 text-5xl lg:text-7xl">Знайди свій <span>зал</span></h1>
     <p class="mt-6 max-w-2xl text-muted">Обери одну з 13 локацій у Львові та Сокільниках. Переглянь адресу, можливості залу й маршрут на карті.</p>
     <p class="club-hours">Години роботи мережі · <span id="club-hours"></span></p>
+  </div>
+</section>
+<section class="club-gallery-section border-b border-line py-16" aria-labelledby="gallery-title">
+  <div class="container mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
+    <h2 id="gallery-title">Галерея клубів <span>Olimp</span></h2>
+    <p class="gallery-location text-muted">Зал на Пасічній · Львів, вул. Пасічна, 167</p>
+
+    <div class="swiper olimp-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a class="gallery-photo"
+             href="https://cdn.sanity.io/images/1ygq8eyb/production/f643a220a5ea813f3ad9b2c9d041374e05244f15-1280x960.jpg"
+             data-fancybox="olimp-gallery"
+             aria-label="Тренажерний зал на Пасічній — відкрити фото">
+            <img src="https://cdn.sanity.io/images/1ygq8eyb/production/f643a220a5ea813f3ad9b2c9d041374e05244f15-1280x960.jpg?w=1100&amp;fit=max&amp;auto=format"
+                 alt="Тренажерний зал на Пасічній"
+                 width="1280" height="960">
+            <span class="gallery-expand" aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a class="gallery-photo"
+             href="https://cdn.sanity.io/images/1ygq8eyb/production/1a3b4190149e62dd02466b9bc2f846753051bd66-1280x960.jpg"
+             data-fancybox="olimp-gallery"
+             aria-label="Тренажерний зал на Пасічній, ракурс 2 — відкрити фото">
+            <img src="https://cdn.sanity.io/images/1ygq8eyb/production/1a3b4190149e62dd02466b9bc2f846753051bd66-1280x960.jpg?w=640&amp;fit=max&amp;auto=format"
+                 alt="Тренажерний зал на Пасічній, ракурс 2"
+                 width="1280" height="960">
+            <span class="gallery-expand" aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a class="gallery-photo"
+             href="https://cdn.sanity.io/images/1ygq8eyb/production/90c8863dc83fb31f42aa8f699a3edcc5fd580fae-1280x960.jpg"
+             data-fancybox="olimp-gallery"
+             aria-label="Тренажерний зал на Пасічній, ракурс 3 — відкрити фото">
+            <img src="https://cdn.sanity.io/images/1ygq8eyb/production/90c8863dc83fb31f42aa8f699a3edcc5fd580fae-1280x960.jpg?w=640&amp;fit=max&amp;auto=format"
+                 alt="Тренажерний зал на Пасічній, ракурс 3"
+                 width="1280" height="960">
+            <span class="gallery-expand" aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a class="gallery-photo"
+             href="https://cdn.sanity.io/images/1ygq8eyb/production/05b762300433c6c756bd91acd96a2450a1c3501f-1280x960.jpg"
+             data-fancybox="olimp-gallery"
+             aria-label="Тренажерний зал на Пасічній, ракурс 4 — відкрити фото">
+            <img src="https://cdn.sanity.io/images/1ygq8eyb/production/05b762300433c6c756bd91acd96a2450a1c3501f-1280x960.jpg?w=640&amp;fit=max&amp;auto=format"
+                 alt="Тренажерний зал на Пасічній, ракурс 4"
+                 width="1280" height="960">
+            <span class="gallery-expand" aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a class="gallery-photo"
+             href="https://cdn.sanity.io/images/1ygq8eyb/production/c1987feb111c998cc4bb78b7ba888257d965d14b-1280x960.jpg"
+             data-fancybox="olimp-gallery"
+             aria-label="Тренажерний зал на Пасічній, ракурс 5 — відкрити фото">
+            <img src="https://cdn.sanity.io/images/1ygq8eyb/production/c1987feb111c998cc4bb78b7ba888257d965d14b-1280x960.jpg?w=640&amp;fit=max&amp;auto=format"
+                 alt="Тренажерний зал на Пасічній, ракурс 5"
+                 width="1280" height="960">
+            <span class="gallery-expand" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
+    </div>
   </div>
 </section>
 <section id="club-map" class="py-16" aria-labelledby="club-map-title" hidden>
